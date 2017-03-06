@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	var number = 10;
+
+	window.onload = function() {
+		displayNum();
+
+	}
+
+	function displayNum() {
+		document.getElementById('num').innerHTML=number;
+	};
+
+	function doMath(operation) {
+		if (operation == "add") {
+			number += 1;
+			displayNum();
+		}
+		else {
+			number -= 1;
+			displayNum();
+		}
+	};
+
+	function styleNums(number) {
+		var className = "";
+		if (number % 2 == 0) {
+			document.getElementById("num").style.color = "red";		
+		}
+		else {
+			document.getElementById("num").style.color = "black";		
+
+		}
+	};
+	</script>
+
+</head>
+<body>
+	<button id = "mathBtn" onclick="doMath('add');styleNums(number)"><h3>+</h3></button>
+		<h1 id = "num" class=""></h1>
+	<button id = "mathBtn" onclick="doMath('subtract');styleNums(number)"><h3>-</h3></button>
+</body>
+</html>
