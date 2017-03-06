@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day1JavaScript101</title>
+	<script type="text/javascript">
+	
+		//Object variable:
+		var student = { Name: 'Kristin', Role: 'Student', City: 'Greenville' }
+
+		//Array variable:
+		var arr = [1,2,3];
+
+		console.log(student); 
+
+		/*
+		* Displays student name (object prop) at the element 
+		* with specific id when the window loads
+		*/
+		window.onload = function personalize() {
+			document.getElementById('studentName').innerHTML=student.Name;
+		};
+
+		//Displays an alert on the page
+    	function popup(message) {
+    		alert(message + " " + student.Role);
+    	};
+
+    	//Sums the numbers in the array variable and displays in an alert
+    	var sumArray = function(arr) {
+    		var total = 0;
+    		for(i in arr) {
+    			total += arr[i];
+    		};
+    		alert("Total of Array: " + total);
+    	};
+
+	</script>
+</head>
+<body>
+	<h2>
+		Hello <span id="studentName"></span>!
+	</h2>
+		<button onclick="popup('Your role is: ')">PopUp</button>
+		<button onclick="sumArray(arr)">Sum the Array</button>
+	<ul>
+		<li>
+			JavaScript is a "dynamic-typed" variable.
+				<ul>
+					<li>
+						Use "var" to declare a variable rather than specifying the type at declaration.
+					</li>
+					<li>
+						You can change the type of a variable at any point.
+					</li>
+					<li>
+						a = 1;	b = "1"; <br/>
+						a = = b > true <br/>
+						   (JS will try to "normalize" the types)<br/>
+						a = = = b > false <br/>
+						   (JS will not normalize the types)
+					</li>
+				</ul>
+				<ul>
+					<li>
+						Types available:
+						<ul>
+							<li>
+								'string' || "'string'" || '"string"'
+							</li>
+							<li>
+								[array] (items can be different types)
+								<ul>
+									<li>
+										c = ['a', 2, 2.5, [1,2,3]]
+									</li>
+								</ul>
+							</li>
+							<li>
+								bool
+							</li>
+							<li>
+								null
+							</li>
+							<li>
+								undefined
+								<ul>
+									<li>
+										Common error to get. (forgot to define a variable)
+									</li>
+								</ul>
+							</li>
+							<li>
+								object
+								<ul>
+									<li>
+										object in C# is <em>the</em> class that all other objects derive from (hidden base class)
+									</li>
+									<li>
+										object in JS is a type with Key/Value pairs as properties. 
+										Properties can be any type - even other obj.
+										<ul>
+											<li>
+												objName = { Name: 'Kristin', Role: 'Student', City: 'Greenville' }
+											</li>
+											<li>
+												objName.Name returns "Kristin"
+											</li>
+											<li>
+												Add a property at any time with objName.NewProp = 'MyProp'
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Semicolon is not a statement terminator but a statement separator.
+				Not required if statements are on separate lines but BP is to use it anyways.
+			</li>
+			<li>
+				<a href="https://www.w3schools.com/js/" target="_blank"> w3schools.com </a>
+			</li>
+		</ul>
+</body>
+</html>
