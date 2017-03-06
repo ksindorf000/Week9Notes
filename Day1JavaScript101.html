@@ -25,6 +25,11 @@
     		alert(message + " " + student.Role);
     	};
 
+    	//Displays notes about stack
+    	function learnStacks(message) {    		
+    		alert(message);
+    	};
+
     	//Sums the numbers in the array variable and displays in an alert
     	var sumArray = function(arr) {
     		var total = 0;
@@ -42,6 +47,8 @@
 	</h2>
 		<button onclick="popup('Your role is: ')">PopUp</button>
 		<button onclick="sumArray(arr)">Sum the Array</button>
+		<button onclick="learnStacks('Think of an array as a stack of data. If you want to add more data, you have to push it onto the top of the stack (it will be the last thing in the array). If you want to remove something from the array you can pop it off but it\'ll be the one on the top.')">Learn about Stacks</button>
+
 	<ul>
 		<li>
 			JavaScript is a "dynamic-typed" variable.
@@ -52,6 +59,14 @@
 					<li>
 						You can change the type of a variable at any point.
 					</li>
+						<ul>
+							<li>
+								<strong>
+								Include "use strict" in the script tags to 
+								require strongly typed variables.
+								</strong>
+							</li>
+						</ul>
 					<li>
 						a = 1;	b = "1"; <br/>
 						a = = b > true <br/>
@@ -122,7 +137,7 @@
 			</li>
 			<li>
 				<a href="https://www.w3schools.com/js/" target="_blank"> w3schools.com </a>
-			</li>
+			</li>			
 		</ul>
 </body>
 </html>
