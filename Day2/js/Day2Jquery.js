@@ -1,5 +1,24 @@
 $().ready(function() {
 
+/**************API JQUERY*****************/
+
+	$("#starwars").click(function() {
+
+		$.get("http://swapi.co/api/people/", 
+			function(resp) 
+			{
+				console.log(resp);
+				$("#swapi").val(resp.results[0].name);
+			}
+		);
+
+	});
+
+
+
+
+/**************JQUERY INTRO*****************/
+
 	$("#title").css("color", '#ab459e')
 				.css("font-family", 'Tahoma')
 				.css("font-size", '3em');
