@@ -11,28 +11,41 @@
 </head>
 <body>
 
-	<div class="heading">
-		<h1 id="title">JQuery 101</h1>
-		<p>Week 9 - Day 2</p>
-			<button onclick="hello()">JS button</button>
-			<button id="JQuery">JQuery button</button>
-		<hr>
+	<div class="container">
+
+		<div class="center bmar30">
+			<h1 id="title">JQuery 101</h1>
+			<p>Week 9 - Day 2</p>
+				<button onclick="hello()">JS button</button>
+				<button id="JQuery">JQuery button</button>
+		</div>
+
+			<hr class="bmar30">
+
+		<ul>
+			<li>
+				".ready" is a method that takes a function as it's only parameter and executes that function.
+				<ul>
+					<li>
+						You cannot call the parameter function because it doesn't have a name.
+					</li>
+					<li>
+						".ready" loads <em>after</em> the page has loaded.
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="center">
+			<hr class="bmar30">
+
+			<button id="hide">Hide stuff</button>
+			<button id="show">Show stuff</button>
+
+			<p id="pHide">Hide me!</p>
+			<p id="pShow">Show me!</p>
+		</div>
+
 	</div>
-
-
-	<ul>
-		<li>
-			".ready" is a method that takes a function as it's only parameter and executes that function.
-			<ul>
-				<li>
-					You cannot call the parameter function because it doesn't have a name.
-				</li>
-				<li>
-					".ready" loads <em>after</em> the page has loaded.
-				</li>
-			</ul>
-		</li>
-	</ul>
-
 </body>
 </html>

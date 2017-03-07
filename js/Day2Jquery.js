@@ -13,6 +13,18 @@ $().ready(function() {
 		.css(
 			"color", '#ab459e');
 
+	$("#hide").click(
+		function() 
+		{
+			$("#pHide").hide();
+		});
+
+	$("#show").click(
+		function() 
+		{
+			$("#pHide").show();
+		});
+
 });
 
 //Regular JS function

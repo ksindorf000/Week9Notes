@@ -1,4 +1,11 @@
-.heading {
+.center {
 	text-align: center;
+}
+
+.bmar30 {
 	margin-bottom: 30px;
+}
+
+.container {
+	margin: 15%;
 }
