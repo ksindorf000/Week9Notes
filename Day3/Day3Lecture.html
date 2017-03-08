@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript">
+
+		var nbr = 1;
+
+		function doMath() {
+			var answerinput = document.getElementById("answer");
+			var show = document.getElementById("showyourwork");
+			total = nbr;
+			for (var i = 1; i < 10; i++) {
+
+				showyourwork.insertAdjacentHTML('beforeend', "<li>" + total + "+ (" + nbr + "*" + i + ")</li>");
+				total += nbr * i;
+				nbr = i;
+			
+			};
+
+			answerinput.value = total;
+
+		};
+
+	</script>
+
+</head>
+<body onload="doMath()">
+	<ul id="showyourwork">
+	</ul>
+	<input type="text" id="answer" readonly="true" >
+</body>
+</html>
